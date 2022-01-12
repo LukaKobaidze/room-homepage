@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import imageDesktop1 from '../../assets/images/desktop-image-hero-1.jpg';
 import imageMobile1 from '../../assets/images/mobile-image-hero-1.jpg';
 import imageDesktop2 from '../../assets/images/desktop-image-hero-2.jpg';
@@ -10,41 +9,15 @@ import ButtonSquareAngle from '../UI/ButtonSquareAngle';
 import '../../styles/Main/BlockImageHero.scss';
 
 type Props = {
+  currentSlide: number;
+  slideRightHandler: () => void;
+  slideLeftHandler: () => void;
   className?: string;
 };
 
-const BlockImageHero = ({ className }: Props) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prevSlide => {
-        if (prevSlide === 2) {
-          return 0;
-        }
-        return (prevSlide += 1);
-      });
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [currentSlide]);
-
-  const slideRightHandler = () => {
-    setCurrentSlide(prevSlide => {
-      if (prevSlide === 2) {
-        return 0;
-      }
-      return (prevSlide += 1);
-    });
-  };
-  const slideLeftHandler = () => {
-    setCurrentSlide(prevSlide => {
-      if (prevSlide === 0) {
-        return 2;
-      }
-      return (prevSlide -= 1);
-    });
-  };
+const BlockImageHero = (props: Props) => {
+  const { currentSlide, slideRightHandler, slideLeftHandler, className } =
+    props;
 
   return (
     <div className={`block-image-hero ${className}`}>
