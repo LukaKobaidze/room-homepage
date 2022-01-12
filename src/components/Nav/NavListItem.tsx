@@ -8,9 +8,7 @@ type Props = {
 const NavListItem = ({ children, className }: Props) => {
   return (
     <li className={`nav-list-item ${className}`}>
-      <a className="nav-list-item--link" href="#">
-        {children}
-      </a>
+      <button className="nav-list-item--link">{children}</button>
     </li>
   );
 };
