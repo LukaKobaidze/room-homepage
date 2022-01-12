@@ -1,0 +1,13 @@
+.title {
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-black);
+  font-size: 37px;
+
+  @media (max-width: 950px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,22 @@
+.button-text-arrow {
+  background: none;
+  border: none;
+  color: var(--clr-black);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  line-height: 1.5;
+
+  &:hover {
+    color: var(--clr-dark-gray);
+  }
+
+  &--icon {
+    margin-left: 15px;
+    & > path {
+      fill: currentColor;
+    }
+  }
+}

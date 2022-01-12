@@ -1,0 +1,31 @@
+.block-text-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-white);
+
+  &__content {
+    width: 80%;
+    min-width: 425px;
+    padding: 0 30px;
+    margin-bottom: 40px;
+
+    @media (max-width: 950px) {
+      min-width: 375px;
+      padding: 0 35px;
+    }
+
+    @media (max-width: 840px) {
+      min-width: initial;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 500px) {
+      padding: 0 2px;
+    }
+  }
+
+  &--button {
+    margin-top: 10px;
+  }
+}

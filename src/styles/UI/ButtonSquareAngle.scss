@@ -1,0 +1,30 @@
+.button-square-angle {
+  border: none;
+  width: 80px;
+  height: 80px;
+  background-color: var(--clr-black);
+  transition: background-color 0.2s ease-out;
+  cursor: pointer;
+
+  @media (max-width: 675px) {
+    width: 70px;
+    height: 70px;
+  }
+  @media (max-width: 525px) {
+    width: 60px;
+    height: 60px;
+
+    & > svg {
+      transform: scale(0.75);
+    }
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      background-color: var(--clr-very-dark-gray);
+    }
+  }
+  &:active {
+    background-color: var(--clr-very-dark-gray);
+  }
+}
