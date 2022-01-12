@@ -3,9 +3,9 @@ import '../../styles/Nav/NavLogo.scss';
 
 const NavLogo = () => {
   return (
-    <a href="#" className="nav-logo">
+    <button className="nav-logo">
       <Logo />
-    </a>
+    </button>
   );
 };
 
